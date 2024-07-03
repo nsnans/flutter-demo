@@ -13,6 +13,11 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   url_launcher: ^6.3.0
+  # 透明图像,后慢慢出现
+  transparent_image: ^2.0.1
+  # 显示来自互联网的图像并将其保存在缓存目录中
+  cached_network_image: ^3.3.1
+  photo_view: ^0.15.0
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +29,21 @@ flutter:
 
   uses-material-design: true
   fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto-Thin.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto-Italic.ttf
+          style: italic
+    - family: QingKeHuangyou
+      fonts:
+        - asset: assets/fonts/ZCOOLQingKeHuangyou-Regular.ttf
     - family: myIcon
       fonts:
         - asset: assets/icons/iconfont.ttf
+
+  assets:
+    - assets/images/
