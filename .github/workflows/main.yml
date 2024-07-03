@@ -1,0 +1,41 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ "main" ]
+    types:
+      - closed 
+    paths-ignore: 
+    - '**.md' 
+    - '**.txt'  
+    - '.github/**'  
+    - '.idea/**' 
+    - '!.github/workflows/**' 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: 3.22.2
+      
+      - name: Build 
+        run: |
+         flutter pub get
+         flutter build web --web-renderer canvaskit --base-href="/flutter-demo/"
+
+      - name: Deploy 
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }} 
+          branch: page
+          folder: build/web 
