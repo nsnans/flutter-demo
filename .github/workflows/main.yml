@@ -28,8 +28,8 @@ jobs:
           channel: 'stable'
           flutter-version: 3.22.2
   
-      - name: Check assets
-        run: ls -R assets
+      - name: Clean Flutter
+        run: flutter clean
 
       - name: Build 
         run: |
