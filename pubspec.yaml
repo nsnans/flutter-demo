@@ -44,6 +44,5 @@ flutter:
     - family: myIcon
       fonts:
         - asset: assets/icons/iconfont.ttf
-
   assets:
-    - assets/
+    - assets/images/

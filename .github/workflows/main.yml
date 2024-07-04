@@ -27,10 +27,7 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: 3.22.2
-  
-      - name: Clean Flutter
-        run: flutter clean
-
+      
       - name: Build 
         run: |
          flutter pub get
