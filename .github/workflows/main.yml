@@ -27,7 +27,10 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: 3.22.2
-      
+  
+      - name: Check assets
+        run: ls -R assets
+
       - name: Build 
         run: |
          flutter pub get
