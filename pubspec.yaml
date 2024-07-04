@@ -40,7 +40,7 @@ flutter:
           style: italic
     - family: QingKeHuangyou
       fonts:
-        - asset: fonts/ZCOOLQingKeHuangyou-Regular.ttf
+        - asset: fonts/ZCOOLQingKeHuangYouRegular.ttf
     - family: myIcon
       fonts:
         - asset: icons/iconfont.ttf
