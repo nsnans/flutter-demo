@@ -17,6 +17,7 @@ dependencies:
   transparent_image: ^2.0.1
   # 显示来自互联网的图像并将其保存在缓存目录中
   cached_network_image: ^3.3.1
+  # 图片预览，在web运行有问题
   photo_view: ^0.15.0
 
 dev_dependencies:
